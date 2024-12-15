@@ -37,7 +37,7 @@ public class CategoryController {
         Category category = categoryService.getCategoryById(id);
         if(category != null){
             updatedCategory.setId(id);
-            return ResponseEntity.ok(categoryService.updateCategory(updatedCategory));
+            return ResponseEntity.ok(categoryService.updateCategory(id , updatedCategory));
         }
         return ResponseEntity.notFound().build();
     }

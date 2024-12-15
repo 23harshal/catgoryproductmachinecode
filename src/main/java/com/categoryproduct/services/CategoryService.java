@@ -27,7 +27,7 @@ public class CategoryService {
         categoryRepository.deleteById(id);
     }
 
-    public Category updateCategory(Category category){
+    public Category updateCategory(Long id ,Category category){
         Optional<Category> categoryOptional = categoryRepository.findById(id);
         if(categoryOptional.isPresent()){
             Category existingCategory = categoryOptional.get();
