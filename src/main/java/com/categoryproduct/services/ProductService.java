@@ -13,7 +13,7 @@ public class ProductService {
     @Autowired
     private ProductRepository productRepository;
 
-    public Page<Product> getAllProducts(){
+    public Page<Product> getAllProducts(Pageable pageable){
         return productRepository.findAll(pageable);
     }
     public Product getProductById(Long id){
